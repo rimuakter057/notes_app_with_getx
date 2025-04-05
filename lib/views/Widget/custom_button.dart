@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../utils/color.dart';
 
 class CustomButton extends StatelessWidget {
-   void Function()? onTap;
-  CustomButton({
+  final void Function()? onTap;
+  const CustomButton({
     super.key,
     required this.size,
     required this.medium,

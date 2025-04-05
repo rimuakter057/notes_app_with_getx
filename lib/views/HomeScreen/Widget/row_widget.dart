@@ -10,11 +10,11 @@ class RowWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(onPressed: (){}, icon:Icon(Icons.menu)),
+        IconButton(onPressed: (){}, icon:const Icon(Icons.menu)),
         Row(
           children: [
-            IconButton(onPressed: (){}, icon:Icon(Icons.search)),
-            IconButton(onPressed: (){}, icon:Icon(Icons.more_vert)),
+            IconButton(onPressed: (){}, icon:const Icon(Icons.search)),
+            IconButton(onPressed: (){}, icon:const Icon(Icons.more_vert)),
           ],
         ),
       ],

@@ -23,8 +23,8 @@ class CustomSingleNotes extends StatelessWidget {
   Widget build(BuildContext context) {
     final createdDateFormat = DateFormat.yMMMd().format(DateTime.now());
     final createdTimeFormat = DateFormat.jm().format(DateTime.now());
-    final updatedDateFormat = DateFormat.yMMMd().format(DateTime.now()??DateTime.now());
-    final updatedTimeFormat = DateFormat.jm().format(DateTime.now()??DateTime.now());
+    final updatedDateFormat = DateFormat.yMMMd().format(DateTime.now());
+    final updatedTimeFormat = DateFormat.jm().format(DateTime.now());
     final controller =Get.put(NotesController());
     final note = controller.notes.elementAt(index);
     return InkWell(
@@ -41,18 +41,10 @@ class CustomSingleNotes extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: AppColors.blackColor.withOpacity(.2)),
+          border: Border.all(color: Colors.white70),
         ),
         child: ListTile(
           horizontalTitleGap: 1,
-          leading:Container(
-            height: size.height*.02,
-            width: size.width*.04,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.backgroundColor
-            ),
-          ),
           title: Text(note.title,style: medium,),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:note_app/controllers/notes_controller.dart';
 import 'package:note_app/routes/routes_name.dart';
-import 'package:note_app/routes/routes_pages.dart';
 import 'package:note_app/utils/color.dart';
 import 'Widget/custom_single_notes.dart';
 import 'Widget/row_widget.dart';
@@ -65,14 +63,11 @@ class HomeScreen extends StatelessWidget {
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,
                               itemBuilder: (context, index) {
-                                final note = controller.notes[index];
-
                                 return CustomSingleNotes(
                                   index: index,
                                   size: size,
                                   medium: medium,
                                   small: small,
-
 
                                 );
                               }),
